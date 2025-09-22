@@ -6,7 +6,7 @@ mongoose.set(
 //"mongodb+srv://ankitgodbole:ANKa123%40@cluster0.2beflit.mongodb.net/lms";
 //  ||
 const connectionToDB = async ()=>{
-   try{ const { connection } = await mongoose.connect(
+   try{ const { connection } = await mongoose.connect(process.env.MONGO_URI ||
      "mongodb://localhost:27017/lms"
    );
     if(connection){
