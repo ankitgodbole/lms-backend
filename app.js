@@ -30,6 +30,10 @@ app.use("/ping", (req, res) => {
   res.send("/pong");
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend API is running 🚀");
+});
+
 app.use('/api/v1/user',userRoutes);
 app.use("/api/v1/courses", courseRoutes);
 app.use("/api/v1/payments",paymentRoutes);
