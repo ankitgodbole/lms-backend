@@ -12,7 +12,11 @@ const app = express();
  
 app.use(express.json({limit:'10mb'}));
 const corsOptions = {
-  origin: [process.env.FRONTEND_URL],
+  origin: [
+    process.env.FRONTEND_URL,
+    "http://localhost:5173",
+    "https://lms-frontend-f2e4.vercel.app/"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true, // allow cookies and auth headers
 };
